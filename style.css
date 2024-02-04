@@ -1,0 +1,104 @@
+@font-face{
+    font-family: 'Helvetica';
+    src: url('/font/Helvetica\ Neue\ Regular.otf');
+}
+
+:root{
+    --main: #3A4F97;
+    --main2: #D6E1FF;
+    --bg: #11131F;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body{
+    font-family: 'Helvetica', sans-serif;
+    background: var(--bg);
+    color: white;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 6rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+button{
+    background: var(--main);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: var(--main);
+    border-radius: 0.6rem;
+    outline: none;
+  }
+
+
+/* For WebKit browsers (Chrome, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--main2);
+    cursor: pointer;
+}
+
+/* For Mozilla Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--main2);
+    cursor: pointer;
+}
+
+/* For Microsoft Edge */
+input[type="range"]::-ms-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--main2);
+    cursor: pointer;
+}
+
+
+.audio-container{
+    button{
+        margin: 0rem 1rem;
+    }
+    .aduio-container__custom-controls{
+        width: fit-content;
+        margin: auto;
+    }
+    .custom-controls__volume-control{
+        display: block;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
