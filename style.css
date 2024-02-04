@@ -10,7 +10,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 52.5%;
 }
 
 *{
@@ -26,19 +26,45 @@ img{
 }
 
 body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
     font-family: 'Helvetica', sans-serif;
     background: var(--bg);
     color: white;
 }
 
+.music-wrap{
+    overflow: clip;
+    border-radius: 1rem;
+    border: 1px solid white;
+    width: fit-content;
+    margin: auto;
+}
+
 h1{
+    padding-top: 2rem;
     text-transform: uppercase;
     font-size: 6rem;
     text-align: center;
-    padding: 2rem;
+}
+
+.album-cover-holder{
+    display: block;
+    height: 25rem;
+    background-image: url('../img/The_Chambers_Brothers_-_Album.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 button{
+    transition: 0.2s ease;
     background: var(--main);
     color: white;
     padding: 1rem 2rem;
@@ -48,8 +74,18 @@ button{
     font-weight: bold;
     border: none;
     border-radius: 0.6rem;
+    cursor: pointer;
 }
 
+button:hover{
+    scale: 1.1;
+}
+
+#next-btn,#prev-btn{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 20rem;
+}
 
 input[type="range"] {
     -webkit-appearance: none;
@@ -89,6 +125,10 @@ input[type="range"]::-ms-thumb {
 
 
 .audio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
     button{
         margin: 0rem 1rem;
     }
@@ -102,3 +142,66 @@ input[type="range"]::-ms-thumb {
         width: 100%;
     }
 }
+
+#visualizer {
+    width: 40rem;
+    height: 10rem;
+    background-color: #3A4F97;
+  }
+
+#time-display{
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    transform: translateY(1rem);
+}
+
+
+.app-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    h2{
+        padding: 1rem;
+        background: #3A4F97;
+        text-align: center;
+    }
+    overflow: clip;
+    border-radius: 1rem;
+    border: 1px solid white;
+    margin-top: 4rem;
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    .li-wrap{
+        height: 20rem;
+        overflow: auto;
+        scrollbar-color: #7c8ab8 #f1f1f1; 
+       scrollbar-width: thin; /* For Firefox */
+    }
+    
+
+    li{
+        background: #3A4F97;
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        cursor: pointer;
+    }
+}
+
+.album-cover{
+    width: 6rem;
+}
+
+
+  
