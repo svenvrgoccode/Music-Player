@@ -178,7 +178,7 @@ ul{
     display: flex;
     flex-direction: column;
     .li-wrap{
-        height: 20rem;
+        height: 30rem;
         overflow: auto;
         scrollbar-color: #7c8ab8 #f1f1f1; 
        scrollbar-width: thin; /* For Firefox */
@@ -205,3 +205,11 @@ ul{
 
 
   
+@media(max-width:400px){
+    html{
+        font-size: 42%;
+    }
+    #track-list{
+        width: 80%;
+    }
+}
